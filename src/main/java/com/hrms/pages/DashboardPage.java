@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 package com.hrms.pages;
 
@@ -297,10 +298,37 @@ public class DashboardPage {
                             .getDomAttribute("aria-expanded")));
             return true;
         } catch (TimeoutException e) {
+=======
+package com.hrms.pages;
+
+import java.time.Duration;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class DashboardPage {
+
+    WebDriver driver;
+    WebDriverWait wait;
+
+    By accessDashboardBtn = By.xpath("//button[.//span[text()='Access Dashboard']]");
+
+    public DashboardPage(WebDriver driver) {
+        this.driver = driver;
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+    }
+
+    public boolean isDashboardDisplayed() {
+        try {
+            return wait.until(ExpectedConditions.urlContains("/dashboard/organizations"));
+        } catch (Exception e) {
+>>>>>>> 763cb55a9694c947a9ebc8e889459ad01543928b
             return false;
         }
     }
 
+<<<<<<< HEAD
     // Sidebar
 
     public boolean isSidebarDisplayed() {
@@ -525,5 +553,9 @@ public class DashboardPage {
         }
 
         return texts;
+=======
+    public void clickAccessDashboard() {
+        wait.until(ExpectedConditions.elementToBeClickable(accessDashboardBtn)).click();
+>>>>>>> 763cb55a9694c947a9ebc8e889459ad01543928b
     }
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
@@ -19,3 +20,18 @@
     </test>
 
 </suite>
+=======
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="HRMS Automation Suite">
+
+    <test name="Login Tests">
+
+        <classes>
+            <class name="com.hrms.tests.LoginTest"/>
+        </classes>
+
+    </test>
+
+</suite>
+>>>>>>> 763cb55a9694c947a9ebc8e889459ad01543928b

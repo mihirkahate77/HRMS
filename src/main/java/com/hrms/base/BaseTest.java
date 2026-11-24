@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 package com.hrms.base;
 
@@ -11,11 +12,20 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
+=======
+package com.hrms.base;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+>>>>>>> 763cb55a9694c947a9ebc8e889459ad01543928b
 
 import com.hrms.utils.ConfigReader;
 
 public class BaseTest {
 
+<<<<<<< HEAD
     public static WebDriver driver;
 
     @BeforeMethod
@@ -62,3 +72,28 @@ public class BaseTest {
         }
     }
 }
+=======
+    public WebDriver driver;
+
+    @BeforeMethod
+    public void setup() {
+
+        ConfigReader.loadConfig();
+
+        driver = new ChromeDriver();
+
+        driver.manage().window().maximize();
+
+        driver.get(ConfigReader.getProperty("url"));
+    }
+
+    @AfterMethod
+    public void tearDown() {
+
+        if (driver != null) {
+
+            driver.quit();
+        }
+    }
+}
+>>>>>>> 763cb55a9694c947a9ebc8e889459ad01543928b

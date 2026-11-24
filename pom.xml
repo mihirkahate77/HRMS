@@ -1,7 +1,23 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+=======
+<!--<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">-->
+<!--  <modelVersion>4.0.0</modelVersion>-->
+<!--  <groupId>com.hrms</groupId>-->
+<!--  <artifactId>HRMSAutomation</artifactId>-->
+<!--  <version>0.0.1-SNAPSHOT</version>-->
+<!--</project>-->
+
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+>>>>>>> 763cb55a9694c947a9ebc8e889459ad01543928b
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.hrms</groupId>
@@ -16,12 +32,17 @@
 
     <dependencies>
 
+<<<<<<< HEAD
+=======
+        <!-- Selenium -->
+>>>>>>> 763cb55a9694c947a9ebc8e889459ad01543928b
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>4.53.0</version>
         </dependency>
 
+<<<<<<< HEAD
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
@@ -33,6 +54,13 @@
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
             <version>5.2.5</version>
+=======
+        <!-- TestNG -->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.9.0</version>
+>>>>>>> 763cb55a9694c947a9ebc8e889459ad01543928b
             <scope>test</scope>
         </dependency>
 
@@ -41,25 +69,38 @@
     <build>
         <plugins>
 
+<<<<<<< HEAD
+=======
+            <!-- Maven Compiler -->
+>>>>>>> 763cb55a9694c947a9ebc8e889459ad01543928b
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.14.1</version>
+<<<<<<< HEAD
                 <configuration>
                     <source>17</source>
                     <target>17</target>
                 </configuration>
             </plugin>
 
+=======
+            </plugin>
+
+            <!-- TestNG Test Execution -->
+>>>>>>> 763cb55a9694c947a9ebc8e889459ad01543928b
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.6.1</version>
+<<<<<<< HEAD
                 <configuration>
                     <suiteXmlFiles>
                         <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
+=======
+>>>>>>> 763cb55a9694c947a9ebc8e889459ad01543928b
             </plugin>
 
         </plugins>

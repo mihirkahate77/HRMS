@@ -1,5 +1,6 @@
 package com.hrms.utils;
 
+<<<<<<< HEAD
 import java.io.InputStream;
 import java.util.Properties;
 
@@ -12,10 +13,34 @@ public class ConfigReader {
             prop.load(input);
         } catch (Exception e) {
             throw new RuntimeException("Unable to load config.properties", e);
+=======
+import java.io.FileInputStream;
+import java.util.Properties;
+
+public class ConfigReader {
+
+    static Properties prop;
+
+    public static void loadConfig() {
+
+        try {
+
+            FileInputStream fis = new FileInputStream(
+                "src/test/resources/config.properties"
+            );
+
+            prop = new Properties();
+            prop.load(fis);
+
+        } catch (Exception e) {
+
+            e.printStackTrace();
+>>>>>>> 763cb55a9694c947a9ebc8e889459ad01543928b
         }
     }
 
     public static String getProperty(String key) {
+<<<<<<< HEAD
         String value = prop.getProperty(key);
         if (value == null) throw new RuntimeException("Missing property: " + key);
         return value.trim();
@@ -35,3 +60,9 @@ public class ConfigReader {
         return value == null || value.isBlank() ? getProperty("password", "") : value;
     }
 }
+=======
+
+        return prop.getProperty(key);
+    }
+}
+>>>>>>> 763cb55a9694c947a9ebc8e889459ad01543928b

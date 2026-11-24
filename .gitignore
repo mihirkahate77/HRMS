@@ -1,5 +1,12 @@
 target/
+<<<<<<< HEAD
 test-output/
 *.log
 .DS_Store
 src/test/resources/config.local.properties
+=======
+.classpath
+.project
+.settings/
+test-output/
+>>>>>>> 763cb55a9694c947a9ebc8e889459ad01543928b
