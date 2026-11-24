@@ -1,0 +1,21 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="HRMS Automation Suite" parallel="false">
+
+    <listeners>
+        <listener class-name="com.hrms.listeners.TestListener"/>
+    </listeners>
+
+    <test name="HRMS Tests">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="url" value=""/>
+
+        <classes>
+            <class name="com.hrms.tests.LoginTest"/>
+            <class name="com.hrms.tests.DashboardTest"/>
+        </classes>
+    </test>
+
+</suite>
